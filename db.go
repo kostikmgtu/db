@@ -13,6 +13,9 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+// DB - псевдоним для sql.DB, чтобы не импортировать пакет sql в других местах
+type DB = sql.DB
+
 // SQLResponse для результатов всех функций этой библиотеки
 type SQLResponse struct {
 	Success      bool   `json:"success"`
